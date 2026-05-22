@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Dependencies
+node_modules
+node_modules/
+
+# Local dev & build tooling (not part of the deliverable)
+serve.mjs
+screenshot.mjs
+_*.mjs
+_view.html
+
+# Iteration artifacts & reference material
+temporary screenshots/
+nealrfg.com_.png
+Conserve_Logo.avif
+*.pdf
+
+# Raw source photos — source material for assets/img/, not deployed
+assets/photos/
