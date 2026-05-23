@@ -1,5 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/service-air-conditioning", "destination": "/services/air-conditioning", "permanent": true },
+    { "source": "/service-heating", "destination": "/services/heating-furnaces", "permanent": true },
+    { "source": "/service-heat-pumps", "destination": "/services/heating-furnaces", "permanent": true },
+    { "source": "/service-ductless-mini-splits", "destination": "/services/ductless-mini-splits", "permanent": true },
+    { "source": "/service-installation", "destination": "/services/hvac-system", "permanent": true },
+    { "source": "/service-commercial-hvac", "destination": "/services/hvac-system", "permanent": true }
+  ]
 }
