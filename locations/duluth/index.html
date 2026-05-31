@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ductless Mini-Split Installation in Grayson, GA | Conserve Heating &amp; Cooling</title>
-<meta name="description" content="Ductless mini-split installation, repair, and service in Grayson, GA. Perfect for additions, garages, and bonus rooms. Call Conserve at (770) 403-3739." />
-<link rel="icon" href="assets/logo.png" />
-<meta property="og:title" content="Ductless Mini-Split Installation in Grayson, GA | Conserve Heating & Cooling" />
-<meta property="og:description" content="Quiet, efficient ductless mini-split installation and repair for additions, garages, and hard-to-cool rooms across Gwinnett County." />
+<title>Air conditioning repair service in Duluth | Top Rated</title>
+<meta name="description" content="Same-day AC repair in Duluth, GA. Licensed, NATE-certified, 5-star rated, upfront pricing. Call Conserve Heating & Cooling at (770) 403-3739." />
+<link rel="icon" href="/assets/logo.png" />
+<meta property="og:title" content="Duluth AC Repair Service | Conserve Heating & Cooling" />
+<meta property="og:description" content="Fast, honest air conditioning repair for homes and businesses across Gwinnett County. Free estimates." />
 <meta property="og:type" content="website" />
-<link rel="canonical" href="https://www.conserveac.com/services/ductless-mini-splits" />
-<meta property="og:url" content="https://www.conserveac.com/services/ductless-mini-splits" />
+<link rel="canonical" href="https://www.conserveac.com/locations/duluth" />
+<meta property="og:url" content="https://www.conserveac.com/locations/duluth" />
 <meta property="og:image" content="https://www.conserveac.com/assets/img/hero.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,26 +57,32 @@
   body { font-family: 'Hanken Grotesk', system-ui, sans-serif; background: var(--bg); padding-top: var(--strip-h); }
   h1, h2, h3, h4 { font-family: 'Archivo', system-ui, sans-serif; letter-spacing: -0.02em; }
 
+  /* cool gradient on the AC headline phrase */
   .cool-text {
     background: linear-gradient(100deg, #41A6E4 0%, #7FC8F0 55%, #BFE3F7 100%);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
 
-  .glow-cool { background: radial-gradient(closest-side, rgba(30,136,201,.42), transparent); }
-  .glow-warm { background: radial-gradient(closest-side, rgba(232,90,42,.36), transparent); }
+  /* atmospheric dual-temperature glows (dark sections only) — decorative, never capture clicks */
+  .glow-cool { background: radial-gradient(closest-side, rgba(30,136,201,.42), transparent); pointer-events: none; }
+  .glow-warm { background: radial-gradient(closest-side, rgba(232,90,42,.36), transparent); pointer-events: none; }
 
+  /* film grain overlay */
   .grain {
     position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .04;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
+  /* scroll reveal — screenshot.mjs force-adds .is-visible */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
   .reveal.is-visible { opacity: 1; transform: none; }
   .d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; }
   .d4 { transition-delay: .32s; } .d5 { transition-delay: .4s; }
 
+  /* anchor jumps clear the fixed strip */
   [id] { scroll-margin-top: 70px; }
 
+  /* buttons */
   .btn { transition: transform .25s var(--ease-spring), box-shadow .25s var(--ease); }
   .btn-flame {
     background: linear-gradient(180deg, #F0703A, #E85A2A);
@@ -84,23 +90,19 @@
   }
   .btn-flame:hover { transform: translateY(-2px); box-shadow: 0 16px 34px -10px rgba(232,90,42,.85), 0 3px 8px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.25); }
   .btn-flame:active { transform: translateY(0); }
-  .btn-ghost {
-    border: 1.5px solid rgba(255,255,255,.18); background: rgba(255,255,255,.04);
-    transition: border-color .25s var(--ease), background .25s var(--ease), transform .25s var(--ease-spring);
-  }
-  .btn-ghost:hover { border-color: rgba(65,166,228,.6); background: rgba(65,166,228,.1); transform: translateY(-2px); }
-  .btn-ghost:active { transform: translateY(0); }
   a, button { outline: none; }
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
     outline: 2px solid #41A6E4; outline-offset: 2px; border-radius: 6px;
   }
 
+  /* dark surface card */
   .card {
     background: linear-gradient(180deg, rgba(26,36,56,.92), rgba(19,27,45,.92));
     border: 1px solid rgba(255,255,255,.08);
     box-shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 26px 50px -28px rgba(0,0,0,.85);
     transition: transform .35s var(--ease), border-color .3s var(--ease), box-shadow .35s var(--ease);
   }
+  /* light card */
   .card-light {
     background: #FFFFFF;
     border: 1px solid rgba(12,18,32,.09);
@@ -111,10 +113,12 @@
   .card.card-hover:hover { border-color: rgba(65,166,228,.42); box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 36px 60px -28px rgba(0,0,0,.95); }
   .card-light.card-hover:hover { border-color: rgba(30,136,201,.4); box-shadow: 0 2px 4px rgba(12,18,32,.06), 0 34px 56px -26px rgba(12,18,32,.4); }
 
+  /* image zoom on hover */
   .ph { position: relative; overflow: hidden; }
   .ph img { transition: transform .6s var(--ease); }
   .card-hover:hover .ph img { transform: scale(1.06); }
 
+  /* form inputs */
   .field {
     background: #EEF2F8; color: #0A0E18; border: 1.5px solid transparent;
     transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
@@ -123,12 +127,13 @@
   .field:focus { border-color: #1E88C9; box-shadow: 0 0 0 4px rgba(30,136,201,.18); }
   select.field { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%236E7B92' stroke-width='2.5'%3E%3Cpath d='M2 4l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
 
+  /* faq */
   details summary { list-style: none; cursor: pointer; }
   details summary::-webkit-details-marker { display: none; }
   details[open] .faq-icon { transform: rotate(45deg); }
   .faq-icon { transition: transform .3s var(--ease); }
 
-  /* mobile nav toggle */
+  /* mobile nav toggle — hamburger morphs into an X */
   .nav-bar { transition: transform .3s var(--ease), opacity .2s var(--ease); }
   #nav-toggle[aria-expanded="true"] .nav-bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
   #nav-toggle[aria-expanded="true"] .nav-bar:nth-child(2) { opacity: 0; }
@@ -149,17 +154,106 @@
   .m-chevron { transition: transform .25s var(--ease); }
   #m-services-toggle[aria-expanded="true"] .m-chevron { transform: rotate(180deg); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "@id": "https://www.conserveac.com/locations/duluth/#business",
+  "name": "Conserve Heating & Cooling",
+  "legalName": "Conserve Heating & Cooling Inc",
+  "url": "https://www.conserveac.com/",
+  "telephone": "+1-770-403-3739",
+  "email": "Conservehvac@gmail.com",
+  "image": "https://www.conserveac.com/assets/img/hero.jpg",
+  "logo": "https://www.conserveac.com/assets/logo.png",
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Duluth",
+    "addressRegion": "GA",
+    "postalCode": "30096",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.0029,
+    "longitude": -84.1446
+  },
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "Duluth"
+    },
+    {
+      "@type": "Place",
+      "name": "Norcross"
+    },
+    {
+      "@type": "Place",
+      "name": "Suwanee"
+    },
+    {
+      "@type": "Place",
+      "name": "Johns Creek"
+    },
+    {
+      "@type": "Place",
+      "name": "Lawrenceville"
+    },
+    {
+      "@type": "Place",
+      "name": "Gwinnett County"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "21:00"
+    }
+  ],
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Susan Harkavy" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "I have been a customer of Conserve for many years. Sal Kaner, the owner, is a top-notch businessman and very knowledgeable about every aspect of heating and cooling. Mr. Kaner is professional and personable, and I will continue using his services as long as I have a furnace and air conditioning!"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Bob Parker" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "If you want an HVAC company that takes pride in the service it provides and cares about you as a customer, I recommend Conserve Heating & Cooling. I have been a customer of Conserve from its very beginning. I totally trust them to take care of my systems, help me with the right decisions when repairs or replacements are made, and am comfortable granting them access to my home even when I am away."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "St. Clair Richardson" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Sal and the whole entire team at Conserve Heating & Cooling are awesome. Whenever I have an issue with my HVAC system they always show up and get me back up and running within no time. I recommend giving them a call if you are having any HVAC issues."
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="bg-bg text-ink font-body antialiased">
 <div class="grain"></div>
 
-<!-- ============ FIXED UTILITY STRIP ============ -->
+<!-- ============ FIXED UTILITY STRIP — phone is the persistent CTA ============ -->
 <div class="fixed inset-x-0 top-0 z-50 flex items-center text-white" style="height:var(--strip-h);background:linear-gradient(90deg,#12557F,#1E88C9 55%,#2E97D6);">
   <div class="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 text-[12.5px] sm:gap-4 sm:text-[14px]">
     <span class="flex items-center gap-1.5 font-semibold tracking-wide text-white/90">
       <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg>
-      HVAC Contractor #CN210894
+      HVAC License #CN210894
     </span>
     <span class="text-white/35">|</span>
     <a href="tel:+17704033739" class="flex items-center gap-1.5 font-extrabold text-white hover:underline">
@@ -169,13 +263,11 @@
   </div>
 </div>
 
-<!-- ============ NAV ============ -->
+<!-- ============ NAV — scrolls away on scroll ============ -->
 <nav class="relative z-40 border-b border-white/8 bg-bg">
   <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
     <a href="/" class="flex items-center" aria-label="Conserve Heating & Cooling — home">
-      <span class="inline-flex items-center rounded-xl bg-white px-3 py-2 shadow-[0_4px_14px_-4px_rgba(0,0,0,.5)]">
-        <img width="272" height="132" decoding="async" src="assets/logo.png" alt="Conserve Heating & Cooling" class="h-8 w-auto sm:h-9" />
-      </span>
+      <img width="272" height="132" decoding="async" src="/assets/logo.png" alt="Conserve Heating & Cooling" class="h-12 w-auto sm:h-14" />
     </a>
 
     <!-- desktop nav -->
@@ -188,30 +280,30 @@
           <svg class="dropdown-arrow h-4 w-4 text-ink-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div id="services-menu" role="menu" aria-labelledby="services-trigger" class="dropdown-panel absolute left-0 top-full z-50 pt-3">
-          <div class="w-[324px] rounded-2xl border border-white/10 bg-surface p-2 shadow-[0_30px_64px_-24px_rgba(0,0,0,.92)]">
-            <a href="/service-air-conditioning" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
+          <div class="w-[340px] rounded-2xl border border-white/10 bg-surface p-2 shadow-[0_30px_64px_-24px_rgba(0,0,0,.92)]">
+            <a href="/services/air-conditioning" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
               <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue/15 text-blue-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/></svg></span>
-              <span><span class="block text-[14px] font-bold text-ink">Air Conditioning</span><span class="block text-[12px] text-ink-mute">Repair, tune-ups &amp; replacement</span></span>
+              <span><span class="block text-[14px] font-bold text-ink">Air Conditioning</span><span class="block text-[12px] text-ink-mute">Repair, maintenance, install &amp; more</span></span>
             </a>
-            <a href="/service-heating" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
+            <a href="/services/heating-furnaces" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
               <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-flame/15 text-flame-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-5-5-8-7-13-2 5-7 8-7 13a7 7 0 0 0 7 7z"/></svg></span>
-              <span><span class="block text-[14px] font-bold text-ink">Heating &amp; Furnaces</span><span class="block text-[12px] text-ink-mute">No-heat repair &amp; installation</span></span>
+              <span><span class="block text-[14px] font-bold text-ink">Heating &amp; Furnaces</span><span class="block text-[12px] text-ink-mute">Furnace repair, heat pumps &amp; installs</span></span>
             </a>
-            <a href="/service-heat-pumps" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
-              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue/15 text-blue-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v5h-5"/></svg></span>
-              <span><span class="block text-[14px] font-bold text-ink">Heat Pumps</span><span class="block text-[12px] text-ink-mute">Year-round efficient comfort</span></span>
-            </a>
-            <a href="/service-ductless-mini-splits" role="menuitem" aria-current="page" class="flex items-start gap-3 rounded-xl bg-white/[.06] px-3 py-2.5 transition">
+            <a href="/services/ductless-mini-splits" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
               <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue/15 text-blue-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h9a2.5 2.5 0 1 1-2.5 2.5"/></svg></span>
-              <span><span class="block text-[14px] font-bold text-ink">Ductless Mini-Splits</span><span class="block text-[12px] text-ink-mute">Additions, garages &amp; bonus rooms</span></span>
+              <span><span class="block text-[14px] font-bold text-ink">Ductless Mini-Splits</span><span class="block text-[12px] text-ink-mute">Zone control for any space</span></span>
             </a>
-            <a href="/service-installation" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
-              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-flame/15 text-flame-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7L12 12l8.7-5M12 12v10"/></svg></span>
-              <span><span class="block text-[14px] font-bold text-ink">New System Installation</span><span class="block text-[12px] text-ink-mute">Load-calculated, right-sized systems</span></span>
+            <a href="/services/ductwork-air-quality" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
+              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue/15 text-blue-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h12a3 3 0 1 1 0 6H3M3 16h9"/></svg></span>
+              <span><span class="block text-[14px] font-bold text-ink">Ductwork &amp; Air Quality</span><span class="block text-[12px] text-ink-mute">Duct cleaning, repair &amp; vent service</span></span>
             </a>
-            <a href="/service-commercial-hvac" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
-              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue/15 text-blue-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M15 21V11h4v10M8 7h2M8 11h2M8 15h2"/></svg></span>
-              <span><span class="block text-[14px] font-bold text-ink">Commercial HVAC</span><span class="block text-[12px] text-ink-mute">Rooftop, chiller &amp; VRF systems</span></span>
+            <a href="/services/thermostats" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
+              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-flame/15 text-flame-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <span><span class="block text-[14px] font-bold text-ink">Thermostats &amp; Controls</span><span class="block text-[12px] text-ink-mute">Smart, programmable &amp; manual</span></span>
+            </a>
+            <a href="/services/hvac-system" role="menuitem" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-white/[.06]">
+              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue/15 text-blue-bright"><svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 21V12h6v9"/></svg></span>
+              <span><span class="block text-[14px] font-bold text-ink">Whole-System HVAC</span><span class="block text-[12px] text-ink-mute">Full-system service &amp; commercial</span></span>
             </a>
           </div>
         </div>
@@ -274,7 +366,7 @@
       </a>
     </div>
 
-    <!-- mobile hamburger -->
+    <!-- mobile: hamburger -->
     <button id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
       class="flex flex-col items-center justify-center gap-1.5 rounded-lg p-2.5 transition hover:bg-white/8 sm:hidden">
       <span class="nav-bar block h-0.5 w-6 rounded-full bg-ink"></span>
@@ -283,7 +375,7 @@
     </button>
   </div>
 
-  <!-- mobile menu -->
+  <!-- mobile menu — phone shows as a colored pill button -->
   <div id="mobile-menu" class="hidden border-t border-white/8 bg-bg px-4 pb-5 pt-3 sm:hidden">
     <button id="m-services-toggle" type="button" aria-expanded="false" aria-controls="m-services-list"
       class="flex w-full items-center justify-between rounded-lg px-4 py-3 text-[15px] font-bold text-ink transition hover:bg-white/8">
@@ -291,12 +383,12 @@
       <svg class="m-chevron h-5 w-5 text-ink-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div id="m-services-list" class="hidden pb-1 pl-3">
-      <a href="/service-air-conditioning" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Air Conditioning</a>
-      <a href="/service-heating" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Heating &amp; Furnaces</a>
-      <a href="/service-heat-pumps" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Heat Pumps</a>
-      <a href="/service-ductless-mini-splits" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-blue-bright transition hover:bg-white/8">Ductless Mini-Splits</a>
-      <a href="/service-installation" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">New System Installation</a>
-      <a href="/service-commercial-hvac" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Commercial HVAC</a>
+      <a href="/services/air-conditioning" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Air Conditioning</a>
+      <a href="/services/heating-furnaces" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Heating &amp; Furnaces</a>
+      <a href="/services/ductless-mini-splits" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Ductless Mini-Splits</a>
+      <a href="/services/ductwork-air-quality" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Ductwork &amp; Air Quality</a>
+      <a href="/services/thermostats" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Thermostats &amp; Controls</a>
+      <a href="/services/hvac-system" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Whole-System HVAC</a>
     </div>
     <button id="m-locations-toggle" type="button" aria-expanded="false" aria-controls="m-locations-list"
       class="flex w-full items-center justify-between rounded-lg px-4 py-3 text-[15px] font-bold text-ink transition hover:bg-white/8">
@@ -320,7 +412,7 @@
     
     <a href="/about" class="block rounded-lg px-4 py-3 text-[15px] font-bold text-ink transition hover:bg-white/8">About</a>
     <a href="/contact" class="block rounded-lg px-4 py-3 text-[15px] font-bold text-ink transition hover:bg-white/8">Contact</a>
-    <a href="tel:+17704033739" class="btn btn-flame mt-2 flex items-center justify-center gap-2 rounded-full px-5 py-3.5 text-[16px] font-extrabold text-white">
+    <a href="tel:+17704033739" class="btn btn-flame mt-3 flex items-center justify-center gap-2 rounded-full px-5 py-3.5 text-[16px] font-extrabold text-white">
       <svg class="h-4.5 w-4.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
       Call (770) 403-3739
     </a>
@@ -328,28 +420,20 @@
 </nav>
 
 <main>
-<!-- ============ HERO ============ -->
+<!-- ============ §1 HERO ============ -->
 <section class="relative overflow-hidden">
   <div class="absolute inset-0 -z-10">
-    <img width="1440" height="1920" decoding="async" fetchpriority="high" src="assets/img/minisplit.jpg" alt="Ductless mini-split system installed by Conserve Heating &amp; Cooling" class="h-full w-full object-cover" />
-    <div class="absolute inset-0" style="background:linear-gradient(110deg,rgba(8,12,20,.95) 0%,rgba(8,12,20,.82) 40%,rgba(8,12,20,.5) 74%,rgba(8,12,20,.34) 100%);"></div>
-    <div class="absolute inset-x-0 bottom-0 h-40" style="background:linear-gradient(0deg,rgba(8,12,20,.9),transparent);"></div>
+    <img width="1920" height="1440" decoding="async" fetchpriority="high" src="/assets/img/hero.jpg" alt="Conserve Heating &amp; Cooling technician servicing an HVAC system in Duluth, GA" class="h-full w-full object-cover" />
+    <div class="absolute inset-0" style="background:linear-gradient(110deg,rgba(8,12,20,.93) 0%,rgba(8,12,20,.8) 38%,rgba(8,12,20,.46) 72%,rgba(8,12,20,.32) 100%);"></div>
+    <div class="absolute inset-x-0 bottom-0 h-40" style="background:linear-gradient(0deg,rgba(8,12,20,.85),transparent);"></div>
     <div class="glow-cool absolute -right-40 -top-32 h-[32rem] w-[32rem]"></div>
     <div class="glow-warm absolute -bottom-48 -left-32 h-[30rem] w-[30rem]"></div>
   </div>
 
-  <div class="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:gap-10 lg:py-16">
+  <div class="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:gap-10 lg:py-20">
+    <!-- left -->
     <div class="max-w-2xl">
-      <!-- breadcrumb -->
-      <nav class="reveal flex items-center gap-1.5 text-[13px] font-semibold text-ink-mute" aria-label="Breadcrumb">
-        <a href="/" class="transition hover:text-ink-soft">Home</a>
-        <span class="text-ink-mute/50">/</span>
-        <a href="index.html#services" class="transition hover:text-ink-soft">Services</a>
-        <span class="text-ink-mute/50">/</span>
-        <span class="text-ink-soft">Ductless Mini-Splits</span>
-      </nav>
-
-      <div class="reveal d1 mt-5 flex flex-wrap items-center gap-2.5">
+      <div class="reveal flex flex-wrap items-center gap-2.5">
         <span class="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-white/8 px-3 py-1.5 text-[12px] font-bold text-ink">
           <span class="text-flame-bright">★★★★★</span> 5.0 on Google
         </span>
@@ -359,58 +443,54 @@
         </span>
       </div>
 
-      <h1 class="reveal d2 mt-5 font-extrabold leading-[1.05] text-ink">
-        <span class="block text-[2.5rem] sm:text-[3.7rem]"><span class="cool-text">Ductless Mini-Split</span></span>
-        <span class="mt-1 block text-[2.5rem] leading-[1.05] sm:text-[3.7rem]">Service in Grayson, GA</span>
+      <h1 class="reveal d1 mt-6 font-extrabold leading-[1.03] text-ink">
+        <span class="block text-[2.4rem] sm:text-[3.6rem]">Top Rated <span class="cool-text">AC Repair Service</span> in Duluth</span>
+        <span class="mt-2.5 block text-[1.6rem] leading-tight text-flame-bright sm:text-[2.2rem]">30+ Years in Business</span>
       </h1>
 
       <p class="reveal d3 mt-5 max-w-xl text-[17px] leading-relaxed text-ink-soft sm:text-lg">
-        Comfortable, quiet, efficient cooling and heating for the rooms a central system can't reach. Conserve installs and services ductless mini-splits across Grayson and Gwinnett County — often in a single day.
+        Same-day air conditioning repair from a licensed, NATE-certified team that's kept homes and businesses across Duluth and Gwinnett County comfortable for over 30 years.
+      </p>
+
+      <p class="reveal d3 mt-4 max-w-xl text-[15.5px] leading-relaxed text-ink-mute">
+        Duluth runs from the Town Green and historic downtown all the way out past Sugarloaf Parkway and the country club neighborhoods near Berkeley Lake. The HVAC needs are different at each end — and so is the budget. Conserve's been servicing both for 30+ years: smaller residential repairs, full system replacements, and commercial work for businesses along Pleasant Hill Road and Satellite Boulevard. One licensed, NATE-certified team, same fair pricing across all of Duluth.
       </p>
 
       <ul class="reveal d4 mt-7 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3">
         <li class="flex items-center gap-2 rounded-xl border border-white/8 bg-white/5 px-3.5 py-2.5 text-sm font-semibold text-ink">
-          <svg class="h-4 w-4 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Ideal for additions &amp; garages
+          <svg class="h-4 w-4 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Same-Day AC Repair
         </li>
         <li class="flex items-center gap-2 rounded-xl border border-white/8 bg-white/5 px-3.5 py-2.5 text-sm font-semibold text-ink">
-          <svg class="h-4 w-4 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Single-day installation
+          <svg class="h-4 w-4 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> AC Installation &amp; Replacement
         </li>
         <li class="flex items-center gap-2 rounded-xl border border-white/8 bg-white/5 px-3.5 py-2.5 text-sm font-semibold text-ink">
-          <svg class="h-4 w-4 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Quiet &amp; energy-efficient
+          <svg class="h-4 w-4 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Tune-Ups &amp; Maintenance
         </li>
       </ul>
-
-      <div class="reveal d5 mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-        <a href="#quote" class="btn btn-flame inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[15px] font-extrabold text-white">Get My Free Estimate →</a>
-        <a href="tel:+17704033739" class="btn btn-ghost inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-extrabold text-ink">
-          <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-          (770) 403-3739
-        </a>
-      </div>
 
       <p class="reveal d5 mt-6 flex items-center gap-2 text-sm text-ink-mute">
         <span class="h-2 w-2 rounded-full bg-green-400"></span> Open 7 days a week, 8 AM–9 PM • Same-day service available
       </p>
     </div>
 
-    <!-- hero form -->
-    <div class="reveal d3" id="estimate">
+    <!-- right: the one hero CTA — estimate form -->
+    <div class="reveal d2" id="estimate">
       <form class="card rounded-3xl p-6 sm:p-7" data-lead-form novalidate>
         <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute left-[-9999px] h-0 w-0 opacity-0" />
         <div class="text-center">
-          <p class="text-[13px] font-bold uppercase tracking-[.16em] text-flame-bright">Book Your Mini-Split Service</p>
+          <p class="text-[13px] font-bold uppercase tracking-[.16em] text-flame-bright">Schedule Your</p>
           <h2 class="mt-1 text-2xl font-extrabold text-ink sm:text-[26px]">Free Estimate Today</h2>
         </div>
         <div class="mt-5 flex flex-col gap-3">
           <label class="sr-only" for="h-service">Service needed</label>
           <select id="h-service" name="service" required class="field rounded-xl px-4 py-3.5 text-[15px] font-medium">
-            <option value="" disabled>Choose Service*</option>
+            <option value="" selected disabled>Choose Service*</option>
             <option>AC Repair</option>
             <option>AC Installation / Replacement</option>
             <option>Heating / Furnace Repair</option>
             <option>Heating Installation</option>
             <option>Heat Pump Service</option>
-            <option selected>Ductless Mini-Split</option>
+            <option>Ductless Mini-Split</option>
             <option>Maintenance / Tune-Up</option>
             <option>Commercial HVAC</option>
             <option>Something Else</option>
@@ -452,199 +532,192 @@
   </div>
 </section>
 
-<!-- ============ OVERVIEW (light) ============ -->
+<!-- ============ TRUST #1 — reviews (light) ============ -->
 <section class="bg-paper py-20 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
-    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-      <div class="reveal">
-        <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue">Ductless Mini-Splits</p>
-        <h2 class="mt-3 text-3xl font-extrabold text-slate-900 sm:text-[2.5rem] sm:leading-[1.12]">Comfort for the rooms that never feel right</h2>
-        <p class="mt-5 text-[16px] leading-relaxed text-slate-600">
-          Bonus rooms over the garage, sunrooms, finished basements, home offices, additions — some spaces just never get comfortable. A ductless mini-split solves it without tearing into walls for ductwork, and most installs are finished in a single day.
-        </p>
-        <p class="mt-4 text-[16px] leading-relaxed text-slate-600">
-          Our NATE-certified technicians design and install single- and multi-zone mini-split systems from trusted brands like Mitsubishi, Daikin, and LG. You get quiet, efficient, room-by-room control — and an honest recommendation on exactly how many zones you actually need.
-        </p>
-        <ul class="mt-7 grid gap-3 sm:grid-cols-2">
-          <li class="flex items-center gap-2.5 text-[15px] font-semibold text-slate-700"><svg class="h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> No ductwork required</li>
-          <li class="flex items-center gap-2.5 text-[15px] font-semibold text-slate-700"><svg class="h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Room-by-room temperature control</li>
-          <li class="flex items-center gap-2.5 text-[15px] font-semibold text-slate-700"><svg class="h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Quiet, high-efficiency operation</li>
-          <li class="flex items-center gap-2.5 text-[15px] font-semibold text-slate-700"><svg class="h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Usually installed in one day</li>
-        </ul>
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-extrabold text-slate-900 sm:text-[2.6rem] sm:leading-[1.1]">Hire the Most Trusted HVAC Company in Duluth</h2>
+      <p class="mt-4 text-[17px] text-slate-600">With a 99.9% satisfaction rate, learn why we're Duluth's favorite for heating and cooling. Hear from homeowners just like you below.</p>
+    </div>
+
+    <div class="mt-14 grid gap-5 md:grid-cols-3">
+      <figure class="reveal card-light rounded-2xl p-6">
+        <div class="flex items-center justify-between">
+          <span class="text-flame">★★★★★</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.3 3.4v2.8h3.7c2.2-2 3.4-5 3.4-8.4z"/><path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v2.9C3.7 20.5 7.5 23 12 23z"/><path fill="#FBBC05" d="M5.6 13.8c-.2-.7-.4-1.4-.4-2.3s.1-1.6.4-2.3V6.3H1.8C1 7.9.5 9.7.5 11.5s.5 3.6 1.3 5.2l3.8-2.9z"/><path fill="#EA4335" d="M12 4.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1 15.1 0 12 0 7.5 0 3.7 2.5 1.8 6.3l3.8 2.9C6.5 6.5 9 4.5 12 4.5z"/></svg>
+        </div>
+        <blockquote class="mt-4 text-[15px] leading-relaxed text-slate-600">"I have been a customer of Conserve for many years. Sal Kaner, the owner, is a top-notch businessman and very knowledgeable about every aspect of heating and cooling. Mr. Kaner is professional and personable, and I will continue using his services as long as I have a furnace and air conditioning!"</blockquote>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue/12 text-sm font-extrabold text-blue">SH</span>
+          <span><span class="block text-sm font-bold text-slate-900">Susan Harkavy</span><span class="block text-[12px] text-slate-500">Grayson, GA</span></span>
+        </figcaption>
+      </figure>
+      <figure class="reveal d1 card-light rounded-2xl p-6">
+        <div class="flex items-center justify-between">
+          <span class="text-flame">★★★★★</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.3 3.4v2.8h3.7c2.2-2 3.4-5 3.4-8.4z"/><path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v2.9C3.7 20.5 7.5 23 12 23z"/><path fill="#FBBC05" d="M5.6 13.8c-.2-.7-.4-1.4-.4-2.3s.1-1.6.4-2.3V6.3H1.8C1 7.9.5 9.7.5 11.5s.5 3.6 1.3 5.2l3.8-2.9z"/><path fill="#EA4335" d="M12 4.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1 15.1 0 12 0 7.5 0 3.7 2.5 1.8 6.3l3.8 2.9C6.5 6.5 9 4.5 12 4.5z"/></svg>
+        </div>
+        <blockquote class="mt-4 text-[15px] leading-relaxed text-slate-600">"If you want an HVAC company that takes pride in the service it provides and cares about you as a customer, I recommend Conserve Heating &amp; Cooling. I have been a customer of Conserve from its very beginning. I totally trust them to take care of my systems, help me with the right decisions when repairs or replacements are made, and am comfortable granting them access to my home even when I am away."</blockquote>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-flame/12 text-sm font-extrabold text-flame">BP</span>
+          <span><span class="block text-sm font-bold text-slate-900">Bob Parker</span><span class="block text-[12px] text-slate-500">Snellville, GA</span></span>
+        </figcaption>
+      </figure>
+      <figure class="reveal d2 card-light rounded-2xl p-6">
+        <div class="flex items-center justify-between">
+          <span class="text-flame">★★★★★</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.3 3.4v2.8h3.7c2.2-2 3.4-5 3.4-8.4z"/><path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v2.9C3.7 20.5 7.5 23 12 23z"/><path fill="#FBBC05" d="M5.6 13.8c-.2-.7-.4-1.4-.4-2.3s.1-1.6.4-2.3V6.3H1.8C1 7.9.5 9.7.5 11.5s.5 3.6 1.3 5.2l3.8-2.9z"/><path fill="#EA4335" d="M12 4.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1 15.1 0 12 0 7.5 0 3.7 2.5 1.8 6.3l3.8 2.9C6.5 6.5 9 4.5 12 4.5z"/></svg>
+        </div>
+        <blockquote class="mt-4 text-[15px] leading-relaxed text-slate-600">"Sal and the whole entire team at Conserve Heating &amp; Cooling are awesome. Whenever I have an issue with my HVAC system they always show up and get me back up and running within no time. I recommend giving them a call if you are having any HVAC issues."</blockquote>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue/12 text-sm font-extrabold text-blue">SR</span>
+          <span><span class="block text-sm font-bold text-slate-900">St. Clair Richardson</span><span class="block text-[12px] text-slate-500">Lawrenceville, GA</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST #2 — differentiators (dark) ============ -->
+<section class="relative overflow-hidden py-20 sm:py-24">
+  <div class="glow-warm absolute -left-40 top-16 h-[30rem] w-[30rem] opacity-60"></div>
+  <div class="glow-cool absolute -right-44 bottom-0 h-[28rem] w-[28rem] opacity-50"></div>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue-bright">Why Conserve</p>
+      <h2 class="mt-3 text-3xl font-extrabold text-ink sm:text-[2.6rem] sm:leading-[1.1]">An HVAC experience built around you</h2>
+      <p class="mt-4 text-[17px] text-ink-soft">Anyone can swap a part. What sets Conserve apart is how we treat you while we do it — straight answers, fair prices, and work we'd put our name on every time.</p>
+    </div>
+
+    <div class="mt-14 grid gap-5 md:grid-cols-3">
+      <div class="reveal card card-hover rounded-2xl p-7">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#41A6E4,#1E88C9)">
+          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 class="mt-5 text-xl font-bold text-ink">Guaranteed work, zero risk</h3>
+        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">Fully licensed, insured, and backed by a written warranty on every job. Our NATE-certified techs stand behind their work — so your home and your investment are always protected.</p>
       </div>
-      <div class="reveal d1 relative">
-        <div class="ph overflow-hidden rounded-3xl shadow-[0_30px_60px_-30px_rgba(12,18,32,.5)]">
-          <img width="1440" height="1920" decoding="async" loading="lazy" src="assets/img/ductless-pair.jpg" alt="Ductless mini-split system installed by Conserve in a Grayson, GA home" class="aspect-[4/3] w-full object-cover" />
+      <div class="reveal d1 card card-hover rounded-2xl p-7">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#F0703A,#E85A2A)">
+          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="17" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8.5 15l2.5 2.5 5-5"/></svg>
         </div>
-        <div class="card-light absolute -bottom-6 -left-3 rounded-2xl px-5 py-4 sm:-left-6">
-          <p class="text-2xl font-extrabold text-slate-900">One day</p>
-          <p class="text-[13px] font-semibold text-slate-500">typical install time</p>
+        <h3 class="mt-5 text-xl font-bold text-ink">Simple from first call to done</h3>
+        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">Book in about 30 seconds, get a clear written quote, and a friendly tech arrives on time. No phone tag, no confusion — just an easy, hassle-free experience.</p>
+      </div>
+      <div class="reveal d2 card card-hover rounded-2xl p-7">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#41A6E4,#E85A2A)">
+          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z"/></svg>
         </div>
+        <h3 class="mt-5 text-xl font-bold text-ink">Fast response, 7 days a week</h3>
+        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">A Georgia summer doesn't wait, so neither do we. We answer the phone and get to you fast — often the very same day, weekends included.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ WHAT'S INCLUDED (dark) ============ -->
-<section class="relative overflow-hidden py-20 sm:py-24">
-  <div class="glow-cool absolute -left-44 top-10 h-[30rem] w-[30rem] opacity-55"></div>
-  <div class="glow-warm absolute -right-44 bottom-0 h-[28rem] w-[28rem] opacity-50"></div>
+<!-- ============ §3 OUR SERVICES (light) ============ -->
+<section id="services" class="bg-paper py-20 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue-bright">What We Do</p>
-      <h2 class="mt-3 text-3xl font-extrabold text-ink sm:text-[2.5rem] sm:leading-[1.12]">Complete ductless mini-split services</h2>
-      <p class="mt-4 text-[17px] text-ink-soft">From a single zone to a whole-home system, here's how we deliver ductless comfort.</p>
+      <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue">Our Services</p>
+      <h2 class="mt-3 text-3xl font-extrabold text-slate-900 sm:text-[2.6rem] sm:leading-[1.1]">HVAC services for homes &amp; businesses in Duluth</h2>
+      <p class="mt-4 text-[17px] text-slate-600">From a quick AC repair to a full system replacement, Conserve handles every heating and cooling need under one roof. Whatever the job, you get the same honest advice, upfront pricing, and workmanship built to last.</p>
     </div>
 
     <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      <div class="reveal card card-hover rounded-2xl p-7">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#41A6E4,#1E88C9)">
-          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 1 0-5.4 5.4l-7 7a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l7-7a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5z"/></svg>
+      <article class="reveal card-light card-hover overflow-hidden rounded-2xl">
+        <div class="ph aspect-[16/11]"><img width="1440" height="1920" decoding="async" loading="lazy" src="/assets/img/ac-residential.jpg" alt="Residential air conditioning unit serviced by Conserve" class="h-full w-full object-cover" /></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Air Conditioning</h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">Same-day AC repair, scheduled maintenance, full installations, and vent service — every cooling need under one roof.</p>
+          <a href="/services/air-conditioning" class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue transition-all hover:gap-2.5">Explore this service →</a>
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Mini-Split Installation</h3>
-        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">Quiet, efficient single-zone systems installed cleanly — most finished in a single day.</p>
-      </div>
-      <div class="reveal d1 card card-hover rounded-2xl p-7">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#41A6E4,#1E88C9)">
-          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+      </article>
+      <article class="reveal d1 card-light card-hover overflow-hidden rounded-2xl">
+        <div class="ph aspect-[16/11]"><img width="1440" height="1920" decoding="async" loading="lazy" src="/assets/img/furnace.jpg" alt="Furnace installation by Conserve Heating and Cooling" class="h-full w-full object-cover" /></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Heating &amp; Furnaces</h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">No-heat emergencies, furnace repair, heating installs, and high-efficiency heat pumps — built for Georgia winters.</p>
+          <a href="/services/heating-furnaces" class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue transition-all hover:gap-2.5">Explore this service →</a>
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Multi-Zone Systems</h3>
-        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">One outdoor unit, several indoor heads, independent control in every room it serves.</p>
-      </div>
-      <div class="reveal d2 card card-hover rounded-2xl p-7">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#F0703A,#E85A2A)">
-          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 21V12h6v9"/></svg>
+      </article>
+      <article class="reveal d2 card-light card-hover overflow-hidden rounded-2xl">
+        <div class="ph aspect-[16/11]"><img width="1440" height="1920" decoding="async" loading="lazy" src="/assets/img/minisplit.jpg" alt="Ductless mini-split system installed by Conserve" class="h-full w-full object-cover" /></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Ductless Mini-Splits</h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">Perfect for additions, garages, and rooms that never feel right. Quiet, efficient, and usually installed in a single day.</p>
+          <a href="/services/ductless-mini-splits" class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue transition-all hover:gap-2.5">Explore this service →</a>
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Mini-Split Repair</h3>
-        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">Weak airflow, error codes, leaks, or a head that won't respond — we service every major brand.</p>
-      </div>
-      <div class="reveal card card-hover rounded-2xl p-7">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#41A6E4,#1E88C9)">
-          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-5-5-8-7-13-2 5-7 8-7 13a7 7 0 0 0 7 7z"/></svg>
+      </article>
+      <article class="reveal card-light card-hover overflow-hidden rounded-2xl">
+        <div class="ph aspect-[16/11]"><img width="1440" height="1920" decoding="async" loading="lazy" src="/assets/img/furnace-install.jpg" alt="Ductwork installation and air duct service by Conserve" class="h-full w-full object-cover" /></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Ductwork &amp; Air Quality</h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">Cleaner air starts with cleaner ducts. We clean, repair, install, and seal ductwork so your system breathes right.</p>
+          <a href="/services/ductwork-air-quality" class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue transition-all hover:gap-2.5">Explore this service →</a>
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Maintenance &amp; Cleaning</h3>
-        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">Filter, coil, and blower cleaning keeps efficiency high and the air in your home fresh.</p>
-      </div>
-      <div class="reveal d1 card card-hover rounded-2xl p-7">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#41A6E4,#1E88C9)">
-          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+      </article>
+      <article class="reveal d1 card-light card-hover overflow-hidden rounded-2xl">
+        <div class="ph aspect-[16/11]"><img width="1920" height="1440" decoding="async" loading="lazy" src="/assets/img/hero.jpg" alt="Smart thermostat installation by Conserve in a Duluth home" class="h-full w-full object-cover" /></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Thermostats &amp; Smart Controls</h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">Smart, programmable, or simple — Nest, Ecobee, Honeywell. Wired correctly the first time so it actually saves you money.</p>
+          <a href="/services/thermostats" class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue transition-all hover:gap-2.5">Explore this service →</a>
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Additions &amp; Garages</h3>
-        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">Cooling and heating for the spaces a central system was never sized to reach.</p>
-      </div>
-      <div class="reveal d2 card card-hover rounded-2xl p-7">
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style="background:linear-gradient(180deg,#F0703A,#E85A2A)">
-          <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z"/></svg>
+      </article>
+      <article class="reveal d2 card-light card-hover overflow-hidden rounded-2xl">
+        <div class="ph aspect-[16/11]"><img width="1920" height="1440" decoding="async" loading="lazy" src="/assets/img/commercial-crane.jpg" alt="Commercial rooftop HVAC unit installed by Conserve" class="h-full w-full object-cover" /></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Whole-System HVAC</h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">Maintenance plans, full-system repairs, and commercial HVAC service that keeps Gwinnett County homes and businesses running.</p>
+          <a href="/services/hvac-system" class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue transition-all hover:gap-2.5">Explore this service →</a>
         </div>
-        <h3 class="mt-5 text-xl font-bold text-ink">Zoning Consultation</h3>
-        <p class="mt-2.5 text-[15px] leading-relaxed text-ink-soft">We'll assess your home and recommend exactly how many zones you need — no overselling.</p>
-      </div>
+      </article>
     </div>
 
     <div class="reveal mt-12 text-center">
       <a href="#quote" class="btn btn-flame inline-block rounded-full px-8 py-4 text-[15px] font-extrabold text-white">Get My Free Estimate</a>
-      <p class="mt-4 text-[13px] font-semibold uppercase tracking-wide text-ink-mute">
-        Licensed GA Contractor #CN210894 &nbsp;•&nbsp; EPA &amp; NATE Certified &nbsp;•&nbsp; 30+ Years in Gwinnett County
+      <p class="mt-4 text-[13px] font-semibold uppercase tracking-wide text-slate-500">
+        Licensed GA Contractor #CN210894 &nbsp;•&nbsp; EPA &amp; NATE Certified &nbsp;•&nbsp; 30+ Years Serving Gwinnett County
       </p>
     </div>
   </div>
 </section>
 
-<!-- ============ PROCESS (light) ============ -->
-<section class="bg-paper py-20 sm:py-24">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+<!-- ============ §5 ABOUT (dark) ============ -->
+<section id="about" class="border-t border-white/8 bg-bg py-20 sm:py-24">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue">What Happens Next</p>
-      <h2 class="mt-3 text-3xl font-extrabold text-slate-900 sm:text-[2.5rem] sm:leading-[1.12]">Ductless comfort, made simple</h2>
-      <p class="mt-4 text-[17px] text-slate-600">No phone tag, no surprises — just a clear path from the moment you call to the moment your home is comfortable.</p>
+      <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue-bright">Who We Are</p>
+      <h2 class="mt-3 text-3xl font-extrabold text-ink sm:text-[2.5rem] sm:leading-[1.12]">Family-run HVAC, rooted in Gwinnett County</h2>
+      <p class="mt-5 text-[16px] leading-relaxed text-ink-soft">
+        Conserve Heating &amp; Cooling was built on a simple idea: treat every home like our own and every customer like a neighbor — because most of them are. For over 30 years, our family-run team has handled everything from quick summer AC repairs to full commercial installations across Duluth, Norcross, Suwanee and the rest of Gwinnett County.
+      </p>
+      <p class="mt-4 text-[16px] leading-relaxed text-ink-soft">
+        We're NATE-certified and EPA-certified, fully licensed in Georgia (#CN210894), and obsessive about doing the job right. That means honest recommendations — even when the honest answer is "you don't need a new system yet." When you call Conserve, you reach a local team that answers the phone, shows up on time, and stands behind every system we touch.
+      </p>
     </div>
-
-    <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="reveal card-light rounded-2xl p-6">
-        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue/12 text-lg font-extrabold text-blue">1</span>
-        <h3 class="mt-4 text-[17px] font-bold text-slate-900">Call or book online</h3>
-        <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">Reach a friendly local team in about 30 seconds and lock in a same-day or next-day visit.</p>
+    <div class="reveal d1 relative mx-auto mt-14 max-w-4xl">
+      <div class="ph overflow-hidden rounded-3xl"><img width="480" height="360" decoding="async" loading="lazy" src="/assets/img/crew.jpg" alt="Conserve Heating and Cooling technician on the job" class="aspect-[16/9] w-full object-cover" /></div>
+      <div class="card absolute -bottom-6 -right-3 rounded-2xl px-5 py-4 sm:-right-6">
+        <p class="text-2xl font-extrabold text-ink">30+ years</p>
+        <p class="text-[13px] font-semibold text-ink-mute">keeping Gwinnett County comfortable</p>
       </div>
-      <div class="reveal d1 card-light rounded-2xl p-6">
-        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue/12 text-lg font-extrabold text-blue">2</span>
-        <h3 class="mt-4 text-[17px] font-bold text-slate-900">Honest diagnosis</h3>
-        <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">A NATE-certified tech inspects your system and explains exactly what's wrong — and what isn't.</p>
-      </div>
-      <div class="reveal d2 card-light rounded-2xl p-6">
-        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue/12 text-lg font-extrabold text-blue">3</span>
-        <h3 class="mt-4 text-[17px] font-bold text-slate-900">Upfront written quote</h3>
-        <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">You approve a clear, fixed price before any work starts. The number never changes on you.</p>
-      </div>
-      <div class="reveal d3 card-light rounded-2xl p-6">
-        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-flame/12 text-lg font-extrabold text-flame">4</span>
-        <h3 class="mt-4 text-[17px] font-bold text-slate-900">Comfort restored</h3>
-        <p class="mt-2 text-[14.5px] leading-relaxed text-slate-600">We complete the repair, test it, clean up, and back the work with a written warranty.</p>
-      </div>
+      <div class="glow-warm absolute -left-10 -top-10 -z-10 h-64 w-64"></div>
     </div>
-
-    <div class="reveal mt-12 text-center">
-      <a href="#quote" class="btn btn-flame inline-block rounded-full px-8 py-4 text-[15px] font-extrabold text-white">Schedule My Mini-Split Service</a>
+    <div class="reveal d2 mt-16 text-center">
+      <a href="#quote" class="btn btn-flame inline-block rounded-full px-7 py-3.5 text-[15px] font-extrabold text-white">Get My Free Estimate</a>
     </div>
   </div>
 </section>
 
-<!-- ============ REVIEWS (dark) ============ -->
-<section class="relative overflow-hidden py-20 sm:py-24">
-  <div class="glow-warm absolute -left-40 top-16 h-[30rem] w-[30rem] opacity-55"></div>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6">
-    <div class="reveal mx-auto max-w-2xl text-center">
-      <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue-bright">Homeowners Trust Conserve</p>
-      <h2 class="mt-3 text-3xl font-extrabold text-ink sm:text-[2.5rem] sm:leading-[1.12]">Rated 5.0 for ductless installs in Grayson</h2>
-    </div>
-
-    <div class="mt-14 grid gap-5 md:grid-cols-2">
-      <figure class="reveal card rounded-2xl p-6">
-        <div class="flex items-center justify-between">
-          <span class="text-flame-bright">★★★★★</span>
-          <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.3 3.4v2.8h3.7c2.2-2 3.4-5 3.4-8.4z"/><path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v2.9C3.7 20.5 7.5 23 12 23z"/><path fill="#FBBC05" d="M5.6 13.8c-.2-.7-.4-1.4-.4-2.3s.1-1.6.4-2.3V6.3H1.8C1 7.9.5 9.7.5 11.5s.5 3.6 1.3 5.2l3.8-2.9z"/><path fill="#EA4335" d="M12 4.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1 15.1 0 12 0 7.5 0 3.7 2.5 1.8 6.3l3.8 2.9C6.5 6.5 9 4.5 12 4.5z"/></svg>
-        </div>
-        <blockquote class="mt-4 text-[15px] leading-relaxed text-ink-soft">"We finished our bonus room over the garage and it was always too hot. Conserve installed a mini-split in one afternoon — quiet, efficient, and the room is finally usable year-round. Wish we'd done it sooner."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3">
-          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue/20 text-sm font-extrabold text-blue-bright">CB</span>
-          <span><span class="block text-sm font-bold text-ink">Chris B.</span><span class="block text-[12px] text-ink-mute">Snellville, GA</span></span>
-        </figcaption>
-      </figure>
-      <figure class="reveal d1 card rounded-2xl p-6">
-        <div class="flex items-center justify-between">
-          <span class="text-flame-bright">★★★★★</span>
-          <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.3 3.4v2.8h3.7c2.2-2 3.4-5 3.4-8.4z"/><path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v2.9C3.7 20.5 7.5 23 12 23z"/><path fill="#FBBC05" d="M5.6 13.8c-.2-.7-.4-1.4-.4-2.3s.1-1.6.4-2.3V6.3H1.8C1 7.9.5 9.7.5 11.5s.5 3.6 1.3 5.2l3.8-2.9z"/><path fill="#EA4335" d="M12 4.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1 15.1 0 12 0 7.5 0 3.7 2.5 1.8 6.3l3.8 2.9C6.5 6.5 9 4.5 12 4.5z"/></svg>
-        </div>
-        <blockquote class="mt-4 text-[15px] leading-relaxed text-ink-soft">"Conserve put a multi-zone system in our older home that never had good airflow upstairs. Clean install, fair price, and they walked us through using it. Couldn't be happier."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3">
-          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-flame/20 text-sm font-extrabold text-flame-bright">PN</span>
-          <span><span class="block text-sm font-bold text-ink">Patricia N.</span><span class="block text-[12px] text-ink-mute">Grayson, GA</span></span>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ EMBED FORM (dark) ============ -->
+<!-- ============ §6 EMBED FORM (dark) ============ -->
 <section id="quote" class="relative overflow-hidden py-20 sm:py-24">
   <div class="absolute inset-0 -z-10" style="background:linear-gradient(135deg,#0E1422,#0A0E18)"></div>
   <div class="glow-cool absolute -left-32 top-0 h-[30rem] w-[30rem]"></div>
   <div class="glow-warm absolute -right-32 bottom-0 h-[30rem] w-[30rem]"></div>
-  <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+  <div class="mx-auto max-w-xl px-4 sm:px-6">
     <div class="reveal">
-      <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue-bright">Ready When You Are</p>
-      <h2 class="mt-3 text-3xl font-extrabold text-ink sm:text-[2.5rem] sm:leading-[1.12]">Get your free mini-split estimate</h2>
-      <p class="mt-4 text-[16px] leading-relaxed text-ink-soft">Tell us what's going on and we'll get a NATE-certified technician scheduled — often the same day. No obligation, no pressure, no hidden fees.</p>
-      <ul class="mt-6 flex flex-col gap-3">
-        <li class="flex items-center gap-2.5 text-[15px] font-semibold text-ink"><svg class="h-5 w-5 shrink-0 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Free, no-obligation estimates</li>
-        <li class="flex items-center gap-2.5 text-[15px] font-semibold text-ink"><svg class="h-5 w-5 shrink-0 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Same-day appointments, 7 days a week</li>
-        <li class="flex items-center gap-2.5 text-[15px] font-semibold text-ink"><svg class="h-5 w-5 shrink-0 text-blue-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Speak to a real local person</li>
-      </ul>
-      <a href="tel:+17704033739" class="mt-7 inline-flex items-center gap-2 text-lg font-extrabold text-ink">
-        <span class="flex h-11 w-11 items-center justify-center rounded-full" style="background:linear-gradient(180deg,#F0703A,#E85A2A)"><svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-        (770) 403-3739
-      </a>
-    </div>
-    <div class="reveal d1">
       <form class="card rounded-3xl p-6 sm:p-7" data-lead-form novalidate>
         <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute left-[-9999px] h-0 w-0 opacity-0" />
         <h3 class="text-xl font-extrabold text-ink">Request your free estimate</h3>
@@ -659,13 +732,13 @@
             <div>
               <label class="sr-only" for="q-service">Service</label>
               <select id="q-service" name="service" required class="field w-full rounded-xl px-4 py-3.5 text-[15px] font-medium">
-                <option value="" disabled>Service needed*</option>
+                <option value="" selected disabled>Service needed*</option>
                 <option>AC Repair</option>
                 <option>AC Installation / Replacement</option>
                 <option>Heating / Furnace Repair</option>
                 <option>Heating Installation</option>
                 <option>Heat Pump Service</option>
-                <option selected>Ductless Mini-Split</option>
+                <option>Ductless Mini-Split</option>
                 <option>Maintenance / Tune-Up</option>
                 <option>Commercial HVAC</option>
                 <option>Something Else</option>
@@ -697,99 +770,56 @@
   </div>
 </section>
 
-<!-- ============ FAQ (light) ============ -->
-<section class="bg-paper py-20 sm:py-24">
+<!-- ============ §7 FAQ (light) ============ -->
+<section id="faq" class="bg-paper py-20 sm:py-24">
   <div class="mx-auto max-w-3xl px-4 sm:px-6">
     <div class="reveal text-center">
-      <p class="text-[13px] font-bold uppercase tracking-[.18em] text-blue">Ductless Questions</p>
-      <h2 class="mt-3 text-3xl font-extrabold text-slate-900 sm:text-[2.5rem] sm:leading-[1.12]">Ductless mini-split FAQ</h2>
+      <h2 class="text-3xl font-extrabold text-slate-900 sm:text-[2.6rem] sm:leading-[1.1]">Frequently Asked Questions</h2>
     </div>
 
     <div class="reveal mt-12 flex flex-col gap-3">
       <details class="card-light rounded-2xl p-5 sm:p-6" open>
         <summary class="flex items-center justify-between gap-4 text-[17px] font-bold text-slate-900">
-          What is a ductless mini-split?
+          Does Conserve offer free estimates?
           <svg class="faq-icon h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
-        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">It's a heating and cooling system with a small outdoor unit connected to one or more wall- or ceiling-mounted indoor heads. Because it needs no ductwork, it's ideal for additions, garages, and rooms a central system struggles to reach.</p>
+        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">Yes. Estimates on new system installations and replacements are always free, with no obligation and no pressure. Just call <a href="tel:+17704033739" class="font-semibold text-blue hover:underline">(770) 403-3739</a> or fill out the form above and we'll take care of the rest.</p>
       </details>
       <details class="card-light rounded-2xl p-5 sm:p-6">
         <summary class="flex items-center justify-between gap-4 text-[17px] font-bold text-slate-900">
-          How much does a mini-split cost to install?
+          How fast can you come out?
           <svg class="faq-icon h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
-        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">It depends mainly on how many zones you need and the size of the spaces. We do an in-home assessment first, then give you a clear written price — no guesswork and no hidden fees.</p>
+        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">In most cases we offer same-day or next-day appointments, 7 days a week. If your AC is completely out, tell us when you call and we'll prioritize your visit.</p>
       </details>
       <details class="card-light rounded-2xl p-5 sm:p-6">
         <summary class="flex items-center justify-between gap-4 text-[17px] font-bold text-slate-900">
-          Do mini-splits need ductwork?
+          How much does a new HVAC system cost in Duluth?
           <svg class="faq-icon h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
-        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">No — that's the main advantage. A mini-split only needs a small opening for the line set connecting the indoor and outdoor units, so there's no costly ductwork to install or hide.</p>
+        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">It depends on the size of your home and the efficiency level you choose — which is exactly why we do a proper load calculation instead of guessing. After a quick assessment, we give you a clear, written price with no hidden fees, so you can decide with confidence.</p>
       </details>
       <details class="card-light rounded-2xl p-5 sm:p-6">
         <summary class="flex items-center justify-between gap-4 text-[17px] font-bold text-slate-900">
-          How many zones do I need?
+          How often should I service my AC and furnace?
           <svg class="faq-icon h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
-        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">It depends on how many separate rooms or areas you want to control independently. During our assessment we'll recommend exactly what your home needs — never more than that.</p>
+        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">We recommend a tune-up twice a year — your air conditioner in spring and your furnace in fall. Regular maintenance prevents most breakdowns, lowers your energy bills, and meaningfully extends the life of your equipment.</p>
       </details>
       <details class="card-light rounded-2xl p-5 sm:p-6">
         <summary class="flex items-center justify-between gap-4 text-[17px] font-bold text-slate-900">
-          How long does installation take?
+          Are you licensed and insured?
           <svg class="faq-icon h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
-        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">Most single-zone installations are completed in a single day. Larger multi-zone systems may take a bit longer, and we'll give you a clear timeline with your written quote.</p>
+        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">Absolutely. Conserve holds Georgia Type 2 Conditioned Air Contractor License #CN210894 and is fully insured. Our technicians are NATE-certified and EPA-certified, so your home and your system are always in qualified hands.</p>
       </details>
-    </div>
-
-    <div class="reveal mt-10 text-center">
-      <p class="text-[16px] text-slate-600">Still have a question about ductless systems?</p>
-      <a href="tel:+17704033739" class="mt-3 inline-flex items-center gap-2 text-xl font-extrabold text-blue hover:underline">
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        (770) 403-3739
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ OTHER SERVICES (dark) ============ -->
-<section class="border-t border-white/8 bg-bg py-18 sm:py-20">
-  <div class="mx-auto max-w-7xl px-4 py-2 sm:px-6">
-    <div class="reveal mx-auto max-w-2xl text-center">
-      <h2 class="text-2xl font-extrabold text-ink sm:text-3xl">Explore our other HVAC services</h2>
-    </div>
-    <div class="reveal mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <a href="/service-air-conditioning" class="card card-hover flex items-center gap-4 rounded-2xl p-5">
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue/15 text-blue-bright"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/></svg></span>
-        <span class="flex-1"><span class="block text-[15px] font-bold text-ink">Air Conditioning</span><span class="block text-[13px] text-ink-mute">Repair, tune-ups &amp; replacement</span></span>
-        <svg class="h-4 w-4 shrink-0 text-ink-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-      <a href="/service-heating" class="card card-hover flex items-center gap-4 rounded-2xl p-5">
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-flame/15 text-flame-bright"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-5-5-8-7-13-2 5-7 8-7 13a7 7 0 0 0 7 7z"/></svg></span>
-        <span class="flex-1"><span class="block text-[15px] font-bold text-ink">Heating &amp; Furnaces</span><span class="block text-[13px] text-ink-mute">No-heat repair &amp; installation</span></span>
-        <svg class="h-4 w-4 shrink-0 text-ink-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-      <a href="/service-heat-pumps" class="card card-hover flex items-center gap-4 rounded-2xl p-5">
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue/15 text-blue-bright"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v5h-5"/></svg></span>
-        <span class="flex-1"><span class="block text-[15px] font-bold text-ink">Heat Pumps</span><span class="block text-[13px] text-ink-mute">Year-round efficient comfort</span></span>
-        <svg class="h-4 w-4 shrink-0 text-ink-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-      <a href="/service-installation" class="card card-hover flex items-center gap-4 rounded-2xl p-5">
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-flame/15 text-flame-bright"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7L12 12l8.7-5M12 12v10"/></svg></span>
-        <span class="flex-1"><span class="block text-[15px] font-bold text-ink">New System Installation</span><span class="block text-[13px] text-ink-mute">Load-calculated, right-sized systems</span></span>
-        <svg class="h-4 w-4 shrink-0 text-ink-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-      <a href="/service-commercial-hvac" class="card card-hover flex items-center gap-4 rounded-2xl p-5">
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue/15 text-blue-bright"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M15 21V11h4v10M8 7h2M8 11h2M8 15h2"/></svg></span>
-        <span class="flex-1"><span class="block text-[15px] font-bold text-ink">Commercial HVAC</span><span class="block text-[13px] text-ink-mute">Rooftop, chiller &amp; VRF systems</span></span>
-        <svg class="h-4 w-4 shrink-0 text-ink-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-      <a href="index.html#services" class="card card-hover flex items-center gap-4 rounded-2xl border-dashed p-5">
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/8 text-ink"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
-        <span class="flex-1"><span class="block text-[15px] font-bold text-ink">View all services</span><span class="block text-[13px] text-ink-mute">Back to the full service list</span></span>
-        <svg class="h-4 w-4 shrink-0 text-ink-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
+      <details class="card-light rounded-2xl p-5 sm:p-6">
+        <summary class="flex items-center justify-between gap-4 text-[17px] font-bold text-slate-900">
+          Do you service commercial properties?
+          <svg class="faq-icon h-5 w-5 shrink-0 text-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-3 text-[15px] leading-relaxed text-slate-600">Yes. Alongside residential homes, we install and service commercial systems — rooftop units, chilled water systems, makeup and exhaust air, and VRF — for businesses throughout Gwinnett County.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -798,31 +828,18 @@
 <!-- ============ FOOTER ============ -->
 <footer class="border-t border-white/8 bg-bg">
   <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6">
-    <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+    <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr]">
       <div>
-        <span class="inline-flex items-center rounded-xl bg-white px-3.5 py-2.5">
-          <img width="272" height="132" decoding="async" src="assets/logo.png" alt="Conserve Heating & Cooling" class="h-9 w-auto" />
-        </span>
-        <p class="mt-4 max-w-xs text-[14px] leading-relaxed text-ink-soft">Honest, reliable air conditioning &amp; heating for homes and businesses across Grayson and Gwinnett County.</p>
+        <img width="272" height="132" decoding="async" src="/assets/logo.png" alt="Conserve Heating & Cooling" class="h-14 w-auto" />
+        <p class="mt-4 max-w-xs text-[14px] leading-relaxed text-ink-soft">Honest, reliable air conditioning &amp; heating for homes and businesses across Duluth and Gwinnett County.</p>
         <p class="mt-4 text-[12px] font-semibold uppercase tracking-wide text-ink-mute">GA HVAC Contractor #CN210894 • EPA &amp; NATE Certified</p>
-      </div>
-      <div>
-        <h3 class="text-sm font-bold uppercase tracking-wider text-ink">Services</h3>
-        <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-ink-soft">
-          <li><a href="/service-air-conditioning" class="hover:text-blue-bright">Air Conditioning</a></li>
-          <li><a href="/service-heating" class="hover:text-blue-bright">Heating &amp; Furnaces</a></li>
-          <li><a href="/service-heat-pumps" class="hover:text-blue-bright">Heat Pumps</a></li>
-          <li><a href="/service-ductless-mini-splits" class="hover:text-blue-bright">Ductless Mini-Splits</a></li>
-          <li><a href="/service-installation" class="hover:text-blue-bright">New System Installation</a></li>
-          <li><a href="/service-commercial-hvac" class="hover:text-blue-bright">Commercial HVAC</a></li>
-        </ul>
       </div>
       <div>
         <h3 class="text-sm font-bold uppercase tracking-wider text-ink">Contact</h3>
         <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-ink-soft">
           <li><a href="tel:+17704033739" class="font-bold text-ink hover:text-blue-bright">(770) 403-3739</a></li>
           <li><a href="mailto:Conservehvac@gmail.com" class="hover:text-blue-bright">Conservehvac@gmail.com</a></li>
-          <li>Grayson, GA — Serving Gwinnett County</li>
+          <li>Duluth, GA — Serving Gwinnett County</li>
           <li>Open 7 days a week • 8 AM–9 PM</li>
         </ul>
       </div>
@@ -833,7 +850,7 @@
     </div>
     <div class="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/8 pt-6 text-[13px] text-ink-mute sm:flex-row">
       <p>© <span id="year"></span> Conserve Heating &amp; Cooling Inc. All rights reserved.</p>
-      <a href="/" class="hover:text-ink">Back to Home</a>
+      <a href="#services" class="hover:text-ink">Services</a>
     </div>
   </div>
 </footer>
@@ -849,8 +866,12 @@
     navToggle.setAttribute('aria-expanded', String(open));
     navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
-  navToggle?.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
-  mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+  navToggle?.addEventListener('click', () => {
+    setMenu(mobileMenu.classList.contains('hidden'));
+  });
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenu(false));
+  });
 
   // mobile services accordion
   const mServicesToggle = document.getElementById('m-services-toggle');
@@ -919,6 +940,6 @@
 
 </script>
 <script>window.HIKMON_NOTIFY = { site: "conserve-hvac" };</script>
-<script src="assets/lead-form.js"></script>
+<script src="/assets/lead-form.js"></script>
 </body>
 </html>

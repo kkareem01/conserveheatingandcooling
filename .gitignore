@@ -20,3 +20,4 @@ Conserve_Logo.avif
 
 # Raw source photos — source material for assets/img/, not deployed
 assets/photos/
+.vercel

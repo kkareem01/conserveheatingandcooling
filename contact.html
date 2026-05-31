@@ -252,6 +252,56 @@
           </div>
         </div>
       </div>
+      <!-- locations dropdown -->
+      <div class="dropdown relative">
+        <button id="locations-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="locations-menu"
+          class="dropdown-trigger flex items-center gap-1.5 rounded-lg px-4 py-2 text-[15px] font-bold text-ink transition hover:bg-white/8">
+          Locations
+          <svg class="dropdown-arrow h-4 w-4 text-ink-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div id="locations-menu" role="menu" aria-labelledby="locations-trigger" class="dropdown-panel absolute left-0 top-full z-50 pt-3">
+          <div class="w-[260px] rounded-2xl border border-white/10 bg-surface p-2 shadow-[0_30px_64px_-24px_rgba(0,0,0,.92)]">
+            <a href="/" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Grayson</span>
+              <span class="ml-auto text-[10px] font-bold uppercase tracking-wider text-blue-bright">HQ</span>
+            </a>
+            <a href="/locations/snellville" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Snellville</span>
+            </a>
+            <a href="/locations/lawrenceville" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Lawrenceville</span>
+            </a>
+            <a href="/locations/loganville" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Loganville</span>
+            </a>
+            <a href="/locations/lilburn" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Lilburn</span>
+            </a>
+            <a href="/locations/duluth" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Duluth</span>
+            </a>
+            <a href="/locations/norcross" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Norcross</span>
+            </a>
+            <a href="/locations/suwanee" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Suwanee</span>
+            </a>
+            <a href="/locations/johns-creek" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Johns Creek</span>
+            </a>
+            <a href="/locations/alpharetta" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Alpharetta</span>
+            </a>
+            <a href="/locations/roswell" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Roswell</span>
+            </a>
+            <a href="/locations/forsyth-county" role="menuitem" class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-white/[.06]">
+              <span class="text-[14px] font-bold text-ink">Forsyth County</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
       <a href="/about" class="rounded-lg px-4 py-2 text-[15px] font-bold text-ink transition hover:bg-white/8">About</a>
       <a href="/contact" aria-current="page" class="rounded-lg bg-white/8 px-4 py-2 text-[15px] font-bold text-ink transition hover:bg-white/12">Contact</a>
       <a href="tel:+17704033739" class="btn btn-flame ml-1.5 flex items-center gap-2 rounded-full px-5 py-2.5 text-[15px] font-extrabold text-white">
@@ -282,6 +332,26 @@
       <a href="/services/thermostats" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Thermostats &amp; Controls</a>
       <a href="/services/hvac-system" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Whole-System HVAC</a>
     </div>
+    <button id="m-locations-toggle" type="button" aria-expanded="false" aria-controls="m-locations-list"
+      class="flex w-full items-center justify-between rounded-lg px-4 py-3 text-[15px] font-bold text-ink transition hover:bg-white/8">
+      Locations
+      <svg class="m-chevron h-5 w-5 text-ink-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div id="m-locations-list" class="hidden pb-1 pl-3">
+      <a href="/" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Grayson <span class="ml-1 text-[10px] uppercase tracking-wider text-blue-bright">HQ</span></a>
+      <a href="/locations/snellville" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Snellville</a>
+      <a href="/locations/lawrenceville" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Lawrenceville</a>
+      <a href="/locations/loganville" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Loganville</a>
+      <a href="/locations/lilburn" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Lilburn</a>
+      <a href="/locations/duluth" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Duluth</a>
+      <a href="/locations/norcross" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Norcross</a>
+      <a href="/locations/suwanee" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Suwanee</a>
+      <a href="/locations/johns-creek" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Johns Creek</a>
+      <a href="/locations/alpharetta" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Alpharetta</a>
+      <a href="/locations/roswell" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Roswell</a>
+      <a href="/locations/forsyth-county" class="block rounded-lg px-4 py-2.5 text-[14px] font-semibold text-ink-soft transition hover:bg-white/8 hover:text-ink">Forsyth County</a>
+    </div>
+    
     <a href="/about" class="block rounded-lg px-4 py-3 text-[15px] font-bold text-ink transition hover:bg-white/8">About</a>
     <a href="/contact" aria-current="page" class="block rounded-lg bg-white/8 px-4 py-3 text-[15px] font-bold text-ink transition">Contact</a>
     <a href="tel:+17704033739" class="btn btn-flame mt-2 flex items-center justify-center gap-2 rounded-full px-5 py-3.5 text-[16px] font-extrabold text-white">
@@ -308,6 +378,7 @@
     <div class="reveal d1 mt-10">
       <form class="card rounded-3xl p-6 sm:p-7" data-lead-form novalidate>
         <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute left-[-9999px] h-0 w-0 opacity-0" />
+        <h2 class="mb-4 text-center text-2xl font-extrabold text-ink">Tell us about the job</h2>
         <div class="flex flex-col gap-3">
           <label class="sr-only" for="c-name">Full name</label>
           <input id="c-name" name="name" required placeholder="Full name*" class="field rounded-xl px-4 py-3.5 text-[15px]" />
@@ -399,7 +470,7 @@
       </div>
       <div>
         <h3 class="text-sm font-bold uppercase tracking-wider text-ink">Service Area</h3>
-        <p class="mt-4 text-[14px] leading-relaxed text-ink-soft">Grayson • Snellville • Lawrenceville • Loganville • Lilburn • Duluth • Norcross • Suwanee • Johns Creek • Alpharetta • Roswell</p>
+        <p class="mt-4 text-[14px] leading-relaxed text-ink-soft"><a href="/" class="hover:text-blue-bright">Grayson</a> • <a href="/locations/snellville" class="hover:text-blue-bright">Snellville</a> • <a href="/locations/lawrenceville" class="hover:text-blue-bright">Lawrenceville</a> • <a href="/locations/loganville" class="hover:text-blue-bright">Loganville</a> • <a href="/locations/lilburn" class="hover:text-blue-bright">Lilburn</a> • <a href="/locations/duluth" class="hover:text-blue-bright">Duluth</a> • <a href="/locations/norcross" class="hover:text-blue-bright">Norcross</a> • <a href="/locations/suwanee" class="hover:text-blue-bright">Suwanee</a> • <a href="/locations/johns-creek" class="hover:text-blue-bright">Johns Creek</a> • <a href="/locations/alpharetta" class="hover:text-blue-bright">Alpharetta</a> • <a href="/locations/roswell" class="hover:text-blue-bright">Roswell</a> • <a href="/locations/forsyth-county" class="hover:text-blue-bright">Forsyth County</a></p>
       </div>
     </div>
     <div class="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/8 pt-6 text-[13px] text-ink-mute sm:flex-row">
@@ -422,6 +493,7 @@
   navToggle?.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
   mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
 
+  // mobile services accordion
   const mServicesToggle = document.getElementById('m-services-toggle');
   const mServicesList = document.getElementById('m-services-list');
   mServicesToggle?.addEventListener('click', () => {
@@ -429,23 +501,49 @@
     mServicesToggle.setAttribute('aria-expanded', String(!hidden));
   });
 
-  const dropdown = document.querySelector('.dropdown');
-  const ddTrigger = document.getElementById('services-trigger');
-  ddTrigger?.addEventListener('click', () => {
-    const open = dropdown.classList.toggle('is-open');
-    ddTrigger.setAttribute('aria-expanded', String(open));
+  // mobile locations accordion
+  const mLocationsToggle = document.getElementById('m-locations-toggle');
+  const mLocationsList = document.getElementById('m-locations-list');
+  mLocationsToggle?.addEventListener('click', () => {
+    const hidden = mLocationsList.classList.toggle('hidden');
+    mLocationsToggle.setAttribute('aria-expanded', String(!hidden));
+  });
+
+  // desktop dropdowns (services + locations) — click toggle for touch + keyboard
+  const dropdowns = Array.from(document.querySelectorAll('.dropdown'));
+  dropdowns.forEach((dd) => {
+    const trigger = dd.querySelector('.dropdown-trigger');
+    trigger?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = dd.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', String(open));
+      // close siblings
+      dropdowns.forEach((other) => {
+        if (other !== dd) {
+          other.classList.remove('is-open');
+          other.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
   });
   document.addEventListener('click', (e) => {
-    if (dropdown && !dropdown.contains(e.target)) {
-      dropdown.classList.remove('is-open');
-      ddTrigger?.setAttribute('aria-expanded', 'false');
-    }
+    dropdowns.forEach((dd) => {
+      if (!dd.contains(e.target)) {
+        dd.classList.remove('is-open');
+        dd.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && dropdown?.classList.contains('is-open')) {
-      dropdown.classList.remove('is-open');
-      ddTrigger?.setAttribute('aria-expanded', 'false');
-      ddTrigger?.focus();
+    if (e.key === 'Escape') {
+      dropdowns.forEach((dd) => {
+        if (dd.classList.contains('is-open')) {
+          dd.classList.remove('is-open');
+          const t = dd.querySelector('.dropdown-trigger');
+          t?.setAttribute('aria-expanded', 'false');
+          t?.focus();
+        }
+      });
     }
   });
 
