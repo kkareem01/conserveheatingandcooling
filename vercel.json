@@ -9,5 +9,17 @@
     { "source": "/service-ductless-mini-splits", "destination": "/services/ductless-mini-splits", "permanent": true },
     { "source": "/service-installation", "destination": "/services/hvac-system", "permanent": true },
     { "source": "/service-commercial-hvac", "destination": "/services/hvac-system", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
   ]
 }
