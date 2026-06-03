@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.conserveac.com/sitemap.xml
+Sitemap: https://www.conserveheatingandcooling.com/sitemap.xml
